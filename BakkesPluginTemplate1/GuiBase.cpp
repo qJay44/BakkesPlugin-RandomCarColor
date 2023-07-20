@@ -5,7 +5,7 @@
 void BakkesPluginTemplate1::RenderSettings() {
   ImGui::TextUnformatted("Sample text");
 
-  //======= Enable option =======//
+  //======= Enable plugin option =======//
 
   CVarWrapper enableCvar = cvarManager->getCvar("plugin_enabled");
   if (!enableCvar) return;
@@ -18,7 +18,22 @@ void BakkesPluginTemplate1::RenderSettings() {
     ImGui::SetTooltip("Toggle plugin");
   }
 
-  //===========================//
+  //====================================//
+
+  //======= Enable color override for both cars option =======//
+
+  CVarWrapper overrideBothCars = cvarManager->getCvar("override_both_cars");
+  if (!overrideBothCars) return;
+
+  bool enableOverrideBothCars = overrideBothCars.getBoolValue();
+  if (ImGui::Checkbox(overrideBothCars.getDescription().c_str(), &enableOverrideBothCars)) {
+    overrideBothCars.setValue(enableOverrideBothCars);
+  }
+  if (ImGui::IsItemHovered()) {
+    ImGui::SetTooltip("Override colors for both orange and blue team");
+  }
+
+  //====================================//
 }
 
 std::string SettingsWindowBase::GetPluginName()
