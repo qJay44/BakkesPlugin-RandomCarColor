@@ -1,0 +1,3 @@
+C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir
+C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/edit_cache.dir
+C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/rebuild_cache.dir

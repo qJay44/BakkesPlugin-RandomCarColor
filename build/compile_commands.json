@@ -1,0 +1,82 @@
+[
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -x c++-header -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\cmake_pch.hxx.gch -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\build\\CMakeFiles\\MyProject.dir\\cmake_pch.hxx.cxx",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx.cxx"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\BakkesPluginTemplate1.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\BakkesPluginTemplate1.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/BakkesPluginTemplate1.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\GuiBase.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\GuiBase.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/GuiBase.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_additions.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_additions.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_additions.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_demo.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_demo.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_demo.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_draw.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_draw.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_draw.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_impl_dx11.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_impl_dx11.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_impl_dx11.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_impl_win32.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_impl_win32.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_impl_win32.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_rangeslider.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_rangeslider.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_rangeslider.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_searchablecombo.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_searchablecombo.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_searchablecombo.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_stdlib.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_stdlib.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_stdlib.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_timeline.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_timeline.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_timeline.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imgui_widgets.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imgui_widgets.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imgui_widgets.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\IMGUI\\imguivariouscontrols.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\IMGUI\\imguivariouscontrols.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/IMGUI/imguivariouscontrols.cpp"
+},
+{
+  "directory": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/build",
+  "command": "C:\\MinGW\\mingw64\\bin\\g++.exe -DMyProject_EXPORTS @CMakeFiles/MyProject.dir/includes_CXX.rsp -std=gnu++2a -Winvalid-pch -include C:/Users/gerku/source/repos/BakkesPluginTemplate1/build/CMakeFiles/MyProject.dir/cmake_pch.hxx -o CMakeFiles\\MyProject.dir\\BakkesPluginTemplate1\\pch.cpp.obj -c C:\\Users\\gerku\\source\\repos\\BakkesPluginTemplate1\\BakkesPluginTemplate1\\pch.cpp",
+  "file": "C:/Users/gerku/source/repos/BakkesPluginTemplate1/BakkesPluginTemplate1/pch.cpp"
+}
+]
