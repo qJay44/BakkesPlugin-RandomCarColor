@@ -24,7 +24,7 @@ void BakkesPluginTemplate1::loadCVars() {
     .bindTo(enabled);
 
   _globalCvarManager->registerCvar("override_both_cars", "0", "Override both cars", true, true, 0, true, 1)
-    .bindTo(enabled);
+    .bindTo(overrideBothCars);
 
   _globalCvarManager->registerNotifier("setRandomCarColor", [this](std::vector<std::string> args) {
       setRandomCarColor();
@@ -82,6 +82,6 @@ void BakkesPluginTemplate1::setRandomCarColor() {
 }
 
 void BakkesPluginTemplate1::setBMCode(std::string code) {
-	_globalCvarManager->executeCommand("cl_itemmod_enabled 1; cl_itemmod_code \"" + code + "\"");
+  _globalCvarManager->executeCommand("cl_itemmod_enabled 1; cl_itemmod_code \"" + code + "\"");
 }
 

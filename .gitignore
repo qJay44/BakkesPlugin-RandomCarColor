@@ -363,8 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # My ignore
-BakkesPluginTemplate1/fmt
-BakkesPluginTemplate1/IMGUI
 plugins/
 log.txt
 build/
+
