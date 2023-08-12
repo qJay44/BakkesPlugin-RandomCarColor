@@ -3,37 +3,39 @@
 #include "BakkesPluginTemplate1.h"
 
 void BakkesPluginTemplate1::RenderSettings() {
-  ImGui::TextUnformatted("Sample text");
 
   //======= Enable plugin option =======//
 
   CVarWrapper enableCvar = cvarManager->getCvar("plugin_enabled");
-  if (!enableCvar) return;
+  if (enableCvar) {
+    bool enabled = enableCvar.getBoolValue();
+    if (ImGui::Checkbox(enableCvar.getDescription().c_str(), &enabled)) {
+      enableCvar.setValue(enabled);
+      _globalCvarManager->executeCommand("writeconfig", false);
+    }
 
-  bool enabled = enableCvar.getBoolValue();
-  if (ImGui::Checkbox(enableCvar.getDescription().c_str(), &enabled)) {
-    enableCvar.setValue(enabled);
+    if (ImGui::IsItemHovered())
+      ImGui::SetTooltip("Toggle plugin");
   }
-  if (ImGui::IsItemHovered()) {
-    ImGui::SetTooltip("Toggle plugin");
-  }
+
 
   //====================================//
 
   //======= Enable color override for both cars option =======//
 
   CVarWrapper overrideBothCars = cvarManager->getCvar("override_both_cars");
-  if (!overrideBothCars) return;
+  if (overrideBothCars) {
+    bool enableOverrideBothCars = overrideBothCars.getBoolValue();
+    if (ImGui::Checkbox(overrideBothCars.getDescription().c_str(), &enableOverrideBothCars)) {
+      overrideBothCars.setValue(enableOverrideBothCars);
+      _globalCvarManager->executeCommand("writeconfig", false);
+    }
 
-  bool enableOverrideBothCars = overrideBothCars.getBoolValue();
-  if (ImGui::Checkbox(overrideBothCars.getDescription().c_str(), &enableOverrideBothCars)) {
-    overrideBothCars.setValue(enableOverrideBothCars);
-  }
-  if (ImGui::IsItemHovered()) {
-    ImGui::SetTooltip("Override colors for both orange and blue team");
+    if (ImGui::IsItemHovered())
+      ImGui::SetTooltip("Override colors for both orange and blue team");
   }
 
-  //====================================//
+  //==========================================================//
 }
 
 std::string SettingsWindowBase::GetPluginName()

@@ -15,14 +15,16 @@ class BakkesPluginTemplate1:
   public SettingsWindowBase // Uncomment if you wanna render your own tab in the settings menu
 	//,public PluginWindowBase // Uncomment if you want to render your own plugin window
 {
-	std::shared_ptr<bool> enabled;
-	std::shared_ptr<bool> overrideBothCars;
+	std::shared_ptr<bool> enabledPtr;
+	std::shared_ptr<bool> overrideBothCarsPtr;
+	std::shared_ptr<std::string> lastLoadoutCodePtr;
 
 	void onLoad() override;
 	//void onUnload() override; // Uncomment and implement if you need a unload method
 
   void loadCVars();
   void loadHooks();
+  void loadLastLoadout();
   void setRandomCarColor();
   void setBMCode(std::string);
 
