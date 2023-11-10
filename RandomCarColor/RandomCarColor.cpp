@@ -1,25 +1,23 @@
 #include "BMLoadout.h"
 #include "pch.h"
-#include "BakkesPluginTemplate1.h"
-#include <stdlib.h>
+#include "RandomCarColor.h"
 
-BAKKESMOD_PLUGIN(BakkesPluginTemplate1, "write a plugin description here", plugin_version, PLUGINTYPE_FREEPLAY)
+BAKKESMOD_PLUGIN(RandomCarColor, "Randomizes car colors every main menu enter", plugin_version, PLUGINTYPE_FREEPLAY)
 
 std::shared_ptr<CVarManagerWrapper> _globalCvarManager;
 
 
-void BakkesPluginTemplate1::onLoad()
-{
+void RandomCarColor::onLoad() {
 	_globalCvarManager = cvarManager;
   srand((unsigned)time(NULL));
 
-  LOG("Plugin loaded");
   this->loadCVars();
   this->loadHooks();
   this->loadLastLoadout();
+  LOG("Plugin loaded");
 }
 
-void BakkesPluginTemplate1::loadCVars() {
+void RandomCarColor::loadCVars() {
   enabledPtr = std::make_shared<bool>(true);
   overrideBothCarsPtr = std::make_shared<bool>(false);
 	lastLoadoutCodePtr = std::make_shared<std::string>("");
@@ -42,20 +40,14 @@ void BakkesPluginTemplate1::loadCVars() {
   }, "", PERMISSION_ALL);
 }
 
-void BakkesPluginTemplate1::loadHooks() {
+void RandomCarColor::loadHooks() {
   gameWrapper->HookEvent("Function TAGame.GFxData_MainMenu_TA.MainMenuAdded",
     [this](std::string eventName) {
-      CVarWrapper enabledCVar = _globalCvarManager->getCvar("plugin_enabled");
-      if (enabledCVar) {
-        if (enabledCVar.getBoolValue())
-            setRandomCarColor();
-        else
-          LOG("Plugin disabled");
-      }
-    });
+      setRandomCarColor();
+  });
 }
 
-void BakkesPluginTemplate1::loadLastLoadout() {
+void RandomCarColor::loadLastLoadout() {
   if (gameWrapper->IsInGame()) {
     LOG("Usable only out of the game");
     return;
@@ -66,7 +58,14 @@ void BakkesPluginTemplate1::loadLastLoadout() {
     setBMCode(lastLoadoutCodeCVar.getStringValue());
 }
 
-void BakkesPluginTemplate1::setRandomCarColor() {
+void RandomCarColor::setRandomCarColor() {
+  CVarWrapper enabledCVar = _globalCvarManager->getCvar("plugin_enabled");
+  if (enabledCVar)
+    if (!enabledCVar.getBoolValue()) {
+      LOG("Plugin disabled");
+      return;
+    }
+
   if (gameWrapper->IsInGame()) {
     LOG("Usable only out of the game");
     return;
@@ -78,15 +77,15 @@ void BakkesPluginTemplate1::setRandomCarColor() {
     overrideBothCars = overrideBothCarsCVar.getBoolValue();
 
   BMLoadout::BMLoadout loadout;
-  loadout.body.blue_is_orange = *overrideBothCarsPtr.get();
+  loadout.body.blue_is_orange = overrideBothCars;
 
-  // Blue colors
+  // Blue team colors
   loadout.body.blueColor.should_override = true;
   loadout.body.blueColor.primary_colors.randomize();
   loadout.body.blueColor.secondary_colors.randomize();
 
   if (!overrideBothCars) {
-    // Orange colors
+    // Orange team colors
     loadout.body.orangeColor.should_override = true;
     loadout.body.orangeColor.primary_colors.randomize();
     loadout.body.orangeColor.secondary_colors.randomize();
@@ -116,7 +115,7 @@ void BakkesPluginTemplate1::setRandomCarColor() {
   _globalCvarManager->executeCommand("writeconfig", false);
 }
 
-void BakkesPluginTemplate1::setBMCode(std::string code) {
+void RandomCarColor::setBMCode(std::string code) {
   _globalCvarManager->executeCommand("cl_itemmod_enabled 1; cl_itemmod_code \"" + code + "\"");
 }
 

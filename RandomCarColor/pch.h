@@ -12,9 +12,5 @@
 #include "fmt/core.h"
 #include "fmt/ranges.h"
 
-#include "IMGUI/imgui.h"
-#include "IMGUI/imgui_stdlib.h"
-#include "IMGUI/imgui_searchablecombo.h"
-#include "IMGUI/imgui_rangeslider.h"
-
+#include "imgui/imgui.h"
 #include "logging.h"

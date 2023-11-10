@@ -15,7 +15,7 @@ public:
 	virtual ~PluginWindowBase() = default;
 
 	bool isWindowOpen_ = false;
-	std::string menuTitle_ = "BakkesPluginTemplate1";
+	std::string menuTitle_ = "RandomCarColor";
 
 	std::string GetMenuName() override;
 	std::string GetMenuTitle() override;
@@ -28,3 +28,4 @@ public:
 
 	virtual void RenderWindow() = 0;
 };
+

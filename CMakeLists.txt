@@ -20,11 +20,11 @@ endif()
 project(${NAME} VERSION 0.23.0)
 
 # 1. fmt
-set(FMT_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/BakkesPluginTemplate1/fmt/include)
+set(FMT_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/RandomCarColor/fmt/include)
 message(STATUS "fmt loaded")
 
 # 2. imgui
-set(IMGUI_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/BakkesPluginTemplate1/IMGUI)
+set(IMGUI_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/RandomCarColor/imgui)
 message(STATUS "imgui loaded")
 
 # 3. Bakkes sdk
@@ -36,13 +36,13 @@ else()
   message(STATUS "No BakkesSDK path")
 endif()
 
-file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/BakkesPluginTemplate1/*.cpp)
+file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/RandomCarColor/*.cpp)
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 set_property(TARGET ${PROJECT_NAME} PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/build")
 
-target_precompile_headers(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/BakkesPluginTemplate1/pch.h)
+target_precompile_headers(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/RandomCarColor/pch.h)
 
 if (USE_MINGW)
   target_include_directories(${PROJECT_NAME} PUBLIC

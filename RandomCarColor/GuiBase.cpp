@@ -1,8 +1,8 @@
 ﻿#include "pch.h"
 #include "GuiBase.h"
-#include "BakkesPluginTemplate1.h"
+#include "RandomCarColor.h"
 
-void BakkesPluginTemplate1::RenderSettings() {
+void RandomCarColor::RenderSettings() {
 
   //======= Enable plugin option =======//
 
@@ -18,9 +18,6 @@ void BakkesPluginTemplate1::RenderSettings() {
       ImGui::SetTooltip("Toggle plugin");
   }
 
-
-  //====================================//
-
   //======= Enable color override for both cars option =======//
 
   CVarWrapper overrideBothCars = cvarManager->getCvar("override_both_cars");
@@ -34,60 +31,23 @@ void BakkesPluginTemplate1::RenderSettings() {
     if (ImGui::IsItemHovered())
       ImGui::SetTooltip("Override colors for both orange and blue team");
   }
-
-  //==========================================================//
 }
 
-std::string SettingsWindowBase::GetPluginName()
-{
-	return "BakkesPluginTemplate1";
-}
+void SettingsWindowBase::SetImGuiContext(uintptr_t ctx) { ImGui::SetCurrentContext(reinterpret_cast<ImGuiContext*>(ctx)); }
+void PluginWindowBase::SetImGuiContext(uintptr_t ctx)   { ImGui::SetCurrentContext(reinterpret_cast<ImGuiContext*>(ctx)); }
 
-void SettingsWindowBase::SetImGuiContext(uintptr_t ctx)
-{
-	ImGui::SetCurrentContext(reinterpret_cast<ImGuiContext*>(ctx));
-}
+std::string SettingsWindowBase::GetPluginName() { return "RandomCarColor"; }
+std::string PluginWindowBase::GetMenuName()     { return "RandomCarColor"; }
+std::string PluginWindowBase::GetMenuTitle()    { return menuTitle_; }
 
-std::string PluginWindowBase::GetMenuName()
-{
-	return "BakkesPluginTemplate1";
-}
+bool PluginWindowBase::ShouldBlockInput() { return ImGui::GetIO().WantCaptureMouse || ImGui::GetIO().WantCaptureKeyboard; }
+bool PluginWindowBase::IsActiveOverlay()  { return true; }
 
-std::string PluginWindowBase::GetMenuTitle()
-{
-	return menuTitle_;
-}
+void PluginWindowBase::OnOpen()  { isWindowOpen_ = true; }
+void PluginWindowBase::OnClose() { isWindowOpen_ = false; }
 
-void PluginWindowBase::SetImGuiContext(uintptr_t ctx)
-{
-	ImGui::SetCurrentContext(reinterpret_cast<ImGuiContext*>(ctx));
-}
-
-bool PluginWindowBase::ShouldBlockInput()
-{
-	return ImGui::GetIO().WantCaptureMouse || ImGui::GetIO().WantCaptureKeyboard;
-}
-
-bool PluginWindowBase::IsActiveOverlay()
-{
-	return true;
-}
-
-void PluginWindowBase::OnOpen()
-{
-	isWindowOpen_ = true;
-}
-
-void PluginWindowBase::OnClose()
-{
-	isWindowOpen_ = false;
-}
-
-void PluginWindowBase::Render()
-{
-	if (!ImGui::Begin(menuTitle_.c_str(), &isWindowOpen_, ImGuiWindowFlags_None))
-	{
-		// Early out if the window is collapsed, as an optimization.
+void PluginWindowBase::Render() {
+	if (!ImGui::Begin(menuTitle_.c_str(), &isWindowOpen_, ImGuiWindowFlags_None)) { // Early out if the window is collapsed, as an optimization.
 		ImGui::End();
 		return;
 	}
@@ -96,8 +56,8 @@ void PluginWindowBase::Render()
 
 	ImGui::End();
 
-	if (!isWindowOpen_)
-	{
+	if (!isWindowOpen_) {
 		_globalCvarManager->executeCommand("togglemenu " + GetMenuName());
 	}
 }
+
